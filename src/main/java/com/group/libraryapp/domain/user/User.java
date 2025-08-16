@@ -2,6 +2,7 @@ package com.group.libraryapp.domain.user;
 
 import com.group.libraryapp.domain.book.Book;
 import com.group.libraryapp.domain.user.loanhistory.UserLoanHistory;
+import org.jetbrains.annotations.Nullable;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -56,6 +57,7 @@ public class User {
     return name;
   }
 
+  @Nullable
   public Integer getAge() {
     return age;
   }
