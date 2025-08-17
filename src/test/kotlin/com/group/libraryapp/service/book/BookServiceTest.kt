@@ -3,8 +3,8 @@ package com.group.libraryapp.service.book
 import com.group.libraryapp.domain.book.Book
 import com.group.libraryapp.domain.book.BookRepository
 import com.group.libraryapp.domain.user.User
-import com.group.libraryapp.domain.user.UserRepository
 import com.group.libraryapp.domain.user.loanhistory.UserLoanHistory
+import com.group.libraryapp.domain.user.UserRepository
 import com.group.libraryapp.domain.user.loanhistory.UserLoanHistoryRepository
 import com.group.libraryapp.dto.book.request.BookLoanRequest
 import com.group.libraryapp.dto.book.request.BookRequest
@@ -66,7 +66,7 @@ open class BookServiceTest @Autowired constructor(
         // given
         bookRepository.save(Book("이상한 나라의 엘리스"))
         val savedUser = userRepository.save(User("김기윤", null))
-        userLoanHistoryRepository.save(UserLoanHistory(savedUser, "이상한 나라의 엘리스", false))
+        userLoanHistoryRepository.save(UserLoanHistory(savedUser, "이상한 나라의 엘리스", false, null))
         val request = BookLoanRequest("김기윤", "이상한 나라의 엘리스")
 
         // when && then
