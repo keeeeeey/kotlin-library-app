@@ -29,7 +29,7 @@ public class QBook extends EntityPathBase<Book> {
         super(Book.class, forVariable(variable));
     }
 
-    public QBook(Path<Book> path) {
+    public QBook(Path<? extends Book> path) {
         super(path.getType(), path.getMetadata());
     }
 

@@ -32,7 +32,7 @@ public class QUser extends EntityPathBase<User> {
         super(User.class, forVariable(variable));
     }
 
-    public QUser(Path<User> path) {
+    public QUser(Path<? extends User> path) {
         super(path.getType(), path.getMetadata());
     }
 

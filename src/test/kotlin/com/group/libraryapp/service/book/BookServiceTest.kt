@@ -27,7 +27,6 @@ open class BookServiceTest @Autowired constructor(
     private val bookRepository: BookRepository,
     private val userRepository: UserRepository,
     private val userLoanHistoryRepository: UserLoanHistoryRepository,
-    service: BookService
 ) {
 
     @Test
